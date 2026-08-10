@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Tanvir Ahmed",
+    "picture": "https://i.pravatar.cc/300?img=12",
+    "email": "tanvir.ahmed88@gmail.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": ["college", "close friend"],
+    "bio": "Roommates during our CSE years at Dhaka University. Still argue about which of us codes faster, and we've never settled it.",
+    "goal": 14,
+    "next_due_date": "2026-08-07"
+  },
+  {
+    "id": 2,
+    "name": "Rafiul Karim",
+    "picture": "https://i.pravatar.cc/300?img=33",
+    "email": "rafiul.karim@partscorner.com",
+    "days_since_contact": 3,
+    "status": "on-track",
+    "tags": ["work", "supplier"],
+    "bio": "Runs a components distributor in Chattogram. Good source for bulk laptop charger stock and always tips me off on price drops first.",
+    "goal": 30,
+    "next_due_date": "2026-09-07"
+  },
+  {
+    "id": 3,
+    "name": "Nusrat Jahan",
+    "picture": "https://i.pravatar.cc/300?img=45",
+    "email": "nusrat.jahan92@yahoo.com",
+    "days_since_contact": 9,
+    "status": "almost due",
+    "tags": ["neighbor", "family friend"],
+    "bio": "Lives two houses down in Lakshmipur. Our mothers are close, and she still drops by with mishti whenever she visits home.",
+    "goal": 10,
+    "next_due_date": "2026-08-12"
+  },
+  {
+    "id": 4,
+    "name": "Shakil Hossain",
+    "picture": "https://i.pravatar.cc/300?img=51",
+    "email": "shakil.hossain@outlook.com",
+    "days_since_contact": 25,
+    "status": "overdue",
+    "tags": ["family", "childhood"],
+    "bio": "First cousin, grew up next door before his family moved to Dhaka. We used to fly kites off the rooftop every Eid.",
+    "goal": 21,
+    "next_due_date": "2026-08-07"
+  },
+  {
+    "id": 5,
+    "name": "Imran Kabir",
+    "picture": "https://i.pravatar.cc/300?img=14",
+    "email": "imran.kabir.bd@gmail.com",
+    "days_since_contact": 6,
+    "status": "almost due",
+    "tags": ["sports", "local"],
+    "bio": "My badminton partner at the local club, three evenings a week. Fiercely competitive and never lets me win, even once.",
+    "goal": 7,
+    "next_due_date": "2026-08-12"
+  },
+  {
+    "id": 6,
+    "name": "Mahmuda Akter",
+    "picture": "https://i.pravatar.cc/300?img=47",
+    "email": "mahmuda.akter@techsupplybd.com",
+    "days_since_contact": 45,
+    "status": "on-track",
+    "tags": ["business", "supplier"],
+    "bio": "Wholesale contact in Dhaka's electronics market who sources gadgets and lighting fixtures for the shop at fair prices.",
+    "goal": 60,
+    "next_due_date": "2026-08-26"
+  },
+  {
+    "id": 7,
+    "name": "Farhan Chowdhury",
+    "picture": "https://i.pravatar.cc/300?img=59",
+    "email": "farhan.chy@gmail.com",
+    "days_since_contact": 50,
+    "status": "overdue",
+    "tags": ["school", "long-distance"],
+    "bio": "Best friend from secondary school, now working in Kuala Lumpur. We promised to video call monthly but keep missing each other's time zones.",
+    "goal": 45,
+    "next_due_date": "2026-08-06"
+  },
+  {
+    "id": 8,
+    "name": "Ovi Rahman",
+    "picture": "https://i.pravatar.cc/300?img=15",
+    "email": "ovi.rahman.gg@gmail.com",
+    "days_since_contact": 2,
+    "status": "on-track",
+    "tags": ["online", "gaming"],
+    "bio": "Met in a Valorant lobby three years ago and never stopped queuing together. Lives in Sylhet, we've still never met in person.",
+    "goal": 14,
+    "next_due_date": "2026-08-23"
+  }
+]
