@@ -57,7 +57,7 @@ function InteractionTypeChart() {
                                     dataKey="value"
                                 >
                                     {chartData.map((entry, index) => (
-                                        <Cell key={`cell-${index}`} fill={entry.color} />
+                                        <Cell key={`cell-${index}`} fill={entry.color} className='outline-0' />
                                     ))}
                                 </Pie>
                                 <Tooltip />
