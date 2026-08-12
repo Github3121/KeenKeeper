@@ -29,11 +29,11 @@ function InteractionTypeChart() {
     const isAllZero = chartData.every((item) => item.value === 0);
 
     return (
-        <div className='text-center'>
+        <div className='px-5 md:px-[245px] lg:px-[245px] py-[80px] flex flex-col justify-center items-center md:items-start lg:items-start gap-6'>
             <h1 className='text-[30px] md:text-[48px] font-bold'>Friendship Analytics</h1>
-            <div className="w-full mx-1 md:mx-0 lg:mx-0 bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+            <div className="md:mx-auto lg:mx-auto bg-white p-4 sm:p-6 w-full rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-center">
                 {/* Header */}
-                <h2 className="text-lg sm:text-[20px] font-medium text-[#244D3F] text-start">
+                <h2 className="text-lg sm:text-[20px] font-medium text-[#244D3F]">
                     By Interaction Type
                 </h2>
 
