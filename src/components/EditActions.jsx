@@ -8,7 +8,6 @@ const EditActions = ({targetData}) => {
         <>
             <button onClick={() => {
                 notify?.(`${targetData.name} - Profile Edit Processing...`);
-                alert('Clicked!')
             }} className='btn text-[14px]'>Edit</button>
         </>
     );
