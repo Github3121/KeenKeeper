@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'next/link';
 
-export default function NoUserActionsPage() {
+export default function NoUserActionsPage({ ifChartPage }) {
+    console.log(ifChartPage);
     return (
-        <div className="flex items-center justify-center bg-gray-50 px-4 sm:px-6 lg:px-8 mt-30">
+        <div className={`flex items-center justify-center px-4 sm:px-6 lg:px-8 ${ifChartPage ? 'bg-white my-15' : 'bg-gray-50 mt-30'}`}>
             <div className="max-w-md w-full text-center bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
                 <div className="mx-auto flex items-center justify-center h-16 w-16 rounded-full bg-blue-50 text-blue-600 mb-6">
                     <svg
@@ -35,13 +36,6 @@ export default function NoUserActionsPage() {
                     >
                         Home
                     </Link>
-
-                    <button
-                        onClick={() => window.location.reload()}
-                        className="w-full inline-flex justify-center items-center px-4 py-2.5 border border-gray-200 text-sm font-medium rounded-lg text-gray-7cleanup hover:bg-gray-50 transition-colors duration-150"
-                    >
-                        Refresh Page
-                    </button>
                 </div>
 
             </div>

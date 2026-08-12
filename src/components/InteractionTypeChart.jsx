@@ -33,30 +33,30 @@ function InteractionTypeChart() {
                 By Interaction Type
             </h2>
             {
-                (chartData[0].value === 0 && chartData[1].value === 0 && chartData[2].value === 0) && <NoUserActionsPage />
+                (chartData[0].value === 0 && chartData[1].value === 0 && chartData[2].value === 0) ? <NoUserActionsPage ifChartPage={true} /> : (
+                    <div className="h-64 w-full">
+                        <ResponsiveContainer width="100%" height="100%">
+                            <PieChart>
+                                <Pie
+                                    data={chartData}
+                                    cx="50%"
+                                    cy="50%"
+                                    innerRadius={70}
+                                    outerRadius={95}
+                                    paddingAngle={8}
+                                    cornerRadius={5}
+                                    dataKey="value"
+                                >
+                                    {chartData.map((entry, index) => (
+                                        <Cell key={`cell-${index}`} fill={entry.color} />
+                                    ))}
+                                </Pie>
+                                <Tooltip />
+                            </PieChart>
+                        </ResponsiveContainer>
+                    </div>
+                )
             }
-
-            <div className="h-64 w-full">
-                <ResponsiveContainer width="100%" height="100%">
-                    <PieChart>
-                        <Pie
-                            data={chartData}
-                            cx="50%"
-                            cy="50%"
-                            innerRadius={70}
-                            outerRadius={95}
-                            paddingAngle={8}
-                            cornerRadius={5}
-                            dataKey="value"
-                        >
-                            {chartData.map((entry, index) => (
-                                <Cell key={`cell-${index}`} fill={entry.color} />
-                            ))}
-                        </Pie>
-                        <Tooltip />
-                    </PieChart>
-                </ResponsiveContainer>
-            </div>
             <div className={`flex justify-center items-center gap-6 ${(chartData[0].value === 0 || chartData[1].value === 0 || chartData[2].value === 0) ? 'mt-0' : 'mt-4'}`}>
                 {chartData.map((item, index) => (
                     <div key={index} className="flex items-center gap-2">

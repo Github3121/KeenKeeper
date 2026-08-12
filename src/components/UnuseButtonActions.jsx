@@ -5,7 +5,7 @@ import { PiBellSimpleZ } from 'react-icons/pi';
 import { RiArchive2Line, RiDeleteBin6Line } from 'react-icons/ri';
 
 export default function UnuseButton({ targetData }) {
-    const notify = useContext(ContextApi);
+    const {notify} = useContext(ContextApi);
 
     return (
         <>
