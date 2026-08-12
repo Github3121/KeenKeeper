@@ -5,7 +5,6 @@ export default async function Home() {
   const res = await fetch('https://raw.githubusercontent.com/Github3121/KeenKeeper/refs/heads/main/public/friends.json');
   const data = await res.json();
 
-
   const viewOnTrack = data.filter(res => res.status === 'on-track');
   return (
     <div className="w-full flex flex-col justify-center items-center gap-[40px] px-0 md:px-[245px] py-[20px] md:py-[80px] bg-[#F8FAFC]">

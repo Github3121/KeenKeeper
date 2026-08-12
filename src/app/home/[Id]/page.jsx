@@ -1,6 +1,6 @@
 import DetailActions from '@/components/DetailActions';
-import { PiBellSimpleZ } from 'react-icons/pi';
-import { RiArchive2Line, RiDeleteBin6Line } from 'react-icons/ri';
+import EditActions from '@/components/EditActions';
+import UnuseButton from '@/components/UnuseButtonActions';
 
 const DetailPage = async ({ params }) => {
     const { Id } = await params;
@@ -61,9 +61,7 @@ const DetailPage = async ({ params }) => {
                         </div>
                     </div>
                     <div className='flex flex-col justify-between items-center gap-2 w-[350px]'>
-                        <button className='btn btn-wide max-w-full bg-white mx-[100%]'><PiBellSimpleZ size={20} />Snooze 2 weeks</button>
-                        <button className='btn btn-wide max-w-full bg-white mx-[100%]'><RiArchive2Line size={20} />Archive</button>
-                        <button className='btn btn-wide max-w-full bg-white mx-[100%] text-red-500'><RiDeleteBin6Line size={20} />Delete</button>
+                        <UnuseButton targetData={targetData} />
                     </div>
                 </div>
                 <div className='flex flex-col justify-between gap-6'>
@@ -84,13 +82,13 @@ const DetailPage = async ({ params }) => {
                     <div className='flex flex-col gap-4 p-6 bg-white rounded-[8px]'>
                         <div className='flex justify-between items-center'>
                             <h4 className='text-[#244D3F] text-[20px]'>Relationship Goal</h4>
-                            <button className='btn text-[14px]'>Edit</button>
+                            <EditActions targetData={targetData} />
                         </div>
                         <p className='text-[#64748B]'>Connect every <span className='text-[#1F2937] font-bold'>{targetData.goal} days</span></p>
                     </div>
                     <div className='flex flex-col gap-4 p-6 bg-white rounded-[8px]'>
                         <h4 className='text-[#244D3F] text-[20px]'>Quick Check-In</h4>
-                        <DetailActions />
+                        <DetailActions targetData={targetData} />
                     </div>
                 </div>
             </div>

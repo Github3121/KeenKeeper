@@ -29,7 +29,7 @@ const Card = ({ friend }) => {
     };
 
     return (
-        <Link href={`/${friend.id}`} className="card bg-base-100 p-6 shadow-sm">
+        <Link href={`/home/${friend.id}`} className="card bg-base-100 p-6 shadow-sm">
             <figure className="px-10 pt-10">
                 <img
                     src={friend.picture}
