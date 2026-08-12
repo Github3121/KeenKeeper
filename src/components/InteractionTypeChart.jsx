@@ -26,23 +26,32 @@ function InteractionTypeChart() {
         },
     ];
 
-    console.log(chartData[0].value);
+    const isAllZero = chartData.every((item) => item.value === 0);
+
     return (
-        <div className="w-full bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
-            <h2 className="text-[20px] font-medium text-[#244D3F]">
-                By Interaction Type
-            </h2>
-            {
-                (chartData[0].value === 0 && chartData[1].value === 0 && chartData[2].value === 0) ? <NoUserActionsPage ifChartPage={true} /> : (
-                    <div className="h-64 w-full">
+        <div className='text-center'>
+            <h1 className='text-[30px] md:text-[48px] font-bold'>Friendship Analytics</h1>
+            <div className="w-full mx-1 md:mx-0 lg:mx-0 bg-white p-4 sm:p-6 rounded-2xl shadow-sm border border-gray-100 flex flex-col justify-between">
+                {/* Header */}
+                <h2 className="text-lg sm:text-[20px] font-medium text-[#244D3F] text-start">
+                    By Interaction Type
+                </h2>
+
+                {/* Chart Area */}
+                {isAllZero ? (
+                    <div className="my-4">
+                        <NoUserActionsPage ifChartPage={true} />
+                    </div>
+                ) : (
+                    <div className="h-52 sm:h-64 w-full my-2 sm:my-0">
                         <ResponsiveContainer width="100%" height="100%">
                             <PieChart>
                                 <Pie
                                     data={chartData}
                                     cx="50%"
                                     cy="50%"
-                                    innerRadius={70}
-                                    outerRadius={95}
+                                    innerRadius="60%"
+                                    outerRadius="85%"
                                     paddingAngle={8}
                                     cornerRadius={5}
                                     dataKey="value"
@@ -55,20 +64,22 @@ function InteractionTypeChart() {
                             </PieChart>
                         </ResponsiveContainer>
                     </div>
-                )
-            }
-            <div className={`flex justify-center items-center gap-6 ${(chartData[0].value === 0 || chartData[1].value === 0 || chartData[2].value === 0) ? 'mt-0' : 'mt-4'}`}>
-                {chartData.map((item, index) => (
-                    <div key={index} className="flex items-center gap-2">
-                        <span
-                            className="w-2.5 h-2.5 rounded-full"
-                            style={{ backgroundColor: item.color }}
-                        ></span>
-                        <span className="text-sm font-medium text-gray-600">
-                            {item.name}
-                        </span>
-                    </div>
-                ))}
+                )}
+
+                {/* Legend / Footer */}
+                <div className={`flex flex-wrap justify-center items-center gap-4 sm:gap-6 ${isAllZero ? 'mt-2' : 'mt-2 sm:mt-4'}`}>
+                    {chartData.map((item, index) => (
+                        <div key={index} className="flex items-center gap-2">
+                            <span
+                                className="w-2.5 h-2.5 rounded-full shrink-0"
+                                style={{ backgroundColor: item.color }}
+                            ></span>
+                            <span className="text-xs sm:text-sm font-medium text-gray-600">
+                                {item.name}
+                            </span>
+                        </div>
+                    ))}
+                </div>
             </div>
         </div>
     );

@@ -7,11 +7,12 @@ export default function DetailActions({ targetData }) {
     const { notify, FunctionOfArray } = useContext(ContextApi);
 
     return (
-        <div className='flex justify-around items-center gap-4'>
+        <div className='flex flex-col md:flex-row lg:flex-row justify-around items-center gap-4'>
             <button
                 onClick={() => {
                     notify?.(`${targetData?.name} has been called.`);
                     FunctionOfArray?.(targetData, 'Call');
+                    alert('Clicked!');
                 }}
                 className='btn w-56 h-24 grid p-4 text-[18px] rounded-[8px] text-[#1F2937]'
             >

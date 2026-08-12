@@ -6,7 +6,10 @@ const EditActions = ({targetData}) => {
     const {notify} = useContext(ContextApi);
     return (
         <>
-            <button onClick={() => notify?.(`${targetData.name} - Profile Edit Processing...`)} className='btn text-[14px]'>Edit</button>
+            <button onClick={() => {
+                notify?.(`${targetData.name} - Profile Edit Processing...`);
+                alert('Clicked!')
+            }} className='btn text-[14px]'>Edit</button>
         </>
     );
 };

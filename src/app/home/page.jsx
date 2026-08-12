@@ -1,12 +1,11 @@
-'use client';
 import { Plus } from "lucide-react";
 import Card from "@/components/Card";
 import { Suspense } from "react";
 import Loading from "../loading";
 
-export default function Home() {
-  const res = fetch('https://raw.githubusercontent.com/Github3121/KeenKeeper/refs/heads/main/public/friends.json');
-  const data = res.json();
+export default async function Home() {
+  const res = await fetch('https://raw.githubusercontent.com/Github3121/KeenKeeper/refs/heads/main/public/friends.json');
+  const data = await res.json();
 
   const viewOnTrack = data.filter(res => res.status === 'on-track');
   return (

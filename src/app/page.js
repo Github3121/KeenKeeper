@@ -1,5 +1,7 @@
 import { Plus } from "lucide-react";
 import Card from "@/components/Card";
+import { Suspense } from "react";
+import Loading from "./loading";
 
 export default async function Home() {
   const res = await fetch('https://raw.githubusercontent.com/Github3121/KeenKeeper/refs/heads/main/public/friends.json');
@@ -40,7 +42,9 @@ export default async function Home() {
       <div className="pt-[40px] border-t border-[#E9E9E9] flex flex-col gap-4">
         <h3 className="text-[24px] font-semibold text-center md:text-start">Your Friends</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[24px]">
-          {data.map((friend) => <Card key={friend.id} friend={friend} />)}
+          <Suspense fallback={<Loading />}>
+            {data.map((friend) => <Card key={friend.id} friend={friend} />)}
+          </Suspense>
         </div>
       </div>
     </div>
