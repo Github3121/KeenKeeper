@@ -20,7 +20,7 @@ export default function TimelinePage() {
         <div className="min-h-screen bg-[#f8f9fa] py-12 px-4 sm:px-6 lg:px-8 font-sans">
             <div className="max-w-3xl mx-auto">
                 <h1 className="text-3xl font-extrabold text-[#111827] tracking-tight mb-6">
-                    Timeline : {arrays.length}
+                    Timeline
                 </h1>
 
                 <div className="relative inline-block text-left mb-6">
